@@ -8,14 +8,14 @@ string userFood = Console.ReadLine();
 Random rnd = new Random();
 string pcFood = favFood[rnd.Next(0, favFood.Length)];
 
-Console.WriteLine("i cibi preferiti sono " + favFood.Length + ":\n");
-
 while (!favFood.Contains(userFood))
 {
     Console.WriteLine("il cibo non era tra i preferiti, riprova\n");
     userFood = Console.ReadLine();
     Console.WriteLine();
 }
+
+Console.WriteLine("i cibi preferiti sono " + favFood.Length + ":\n");
 
 for (int i = 0; i < favFood.Length; i++)
 {
